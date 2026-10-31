@@ -1,0 +1,142 @@
+/* Jackson University — Premium Glassmorphism Theme */
+
+:root {
+    --primary: #102a43;
+    --primary-dark: #0b1f33;
+    --accent: #0f9d9a;
+    --accent-dark: #087f8c;
+    --gold: #d6ad60;
+    --background: #f3f7fa;
+    --white: #ffffff;
+}
+
+/* Glass Cards */
+.glass-card {
+    background: rgba(255, 255, 255, 0.78);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    border: 1px solid rgba(255, 255, 255, 0.88);
+    box-shadow: 0 20px 45px rgba(16, 42, 67, 0.09);
+    border-radius: 18px;
+}
+
+/* Glass Navigation */
+.glass-nav {
+    background: rgba(255, 255, 255, 0.84);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-bottom: 1px solid rgba(16, 42, 67, 0.10);
+    box-shadow: 0 6px 24px rgba(16, 42, 67, 0.04);
+}
+
+/* Glass Buttons */
+.glass-button {
+    color: var(--primary);
+    background: linear-gradient(
+        135deg,
+        rgba(255, 255, 255, 0.96),
+        rgba(226, 242, 244, 0.78)
+    );
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.95);
+    border-radius: 12px;
+    box-shadow: 0 8px 22px rgba(16, 42, 67, 0.09);
+    transition: transform 0.25s ease,
+                box-shadow 0.25s ease,
+                background 0.25s ease;
+    cursor: pointer;
+}
+
+.glass-button:hover {
+    color: var(--white);
+    transform: translateY(-2px);
+    background: linear-gradient(
+        135deg,
+        var(--accent),
+        var(--accent-dark)
+    );
+    box-shadow: 0 12px 28px rgba(8, 127, 140, 0.22);
+}
+
+.glass-button:focus-visible {
+    outline: 3px solid rgba(15, 157, 154, 0.35);
+    outline-offset: 3px;
+}
+
+/* Premium Background Gradient */
+.gradient-bg {
+    background: linear-gradient(
+        125deg,
+        #edf4f8 0%,
+        #e2f1f2 48%,
+        #f8f5ec 100%
+    );
+    background-size: 200% 200%;
+    animation: gradientMove 18s ease infinite;
+}
+
+/* Gradient Animation */
+@keyframes gradientMove {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Teal Decorative Blob */
+.blob-1 {
+    background: radial-gradient(
+        circle,
+        rgba(15, 157, 154, 0.22) 0%,
+        rgba(16, 42, 67, 0.06) 72%,
+        transparent 100%
+    );
+}
+
+/* Gold and Teal Decorative Blob */
+.blob-2 {
+    background: radial-gradient(
+        circle,
+        rgba(214, 173, 96, 0.20) 0%,
+        rgba(8, 127, 140, 0.10) 68%,
+        transparent 100%
+    );
+}
+
+/* Consistent Base Colours */
+body {
+    background-color: var(--background);
+    color: var(--primary);
+}
+
+a {
+    color: var(--accent-dark);
+}
+
+a:hover {
+    color: var(--primary);
+}
+
+::selection {
+    color: var(--white);
+    background: var(--accent-dark);
+}
+
+/* Accessibility: Respect Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+    .gradient-bg {
+        animation: none;
+    }
+
+    .glass-button {
+        transition: none;
+    }
+}

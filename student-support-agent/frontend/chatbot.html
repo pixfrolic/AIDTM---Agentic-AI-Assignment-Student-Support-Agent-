@@ -1,0 +1,51 @@
+
+<div id="studentChatbot">
+    <div class="mitali-launcher-area">
+        <span class="mitali-launcher-label">Need help?</span>
+        <button id="mitaliLauncher" class="mitali-launcher" type="button" aria-label="Open chat with Mitali" aria-expanded="false" aria-controls="mitaliPanel">
+            <img src="/mitali_avatar.png" alt="Mitali">
+        </button>
+    </div>
+
+    <section id="mitaliPanel" class="mitali-panel" aria-label="Chat with Mitali" hidden>
+        <header class="mitali-header">
+            <div class="mitali-avatar">
+                <img src="/mitali_avatar.png" alt="Mitali">
+            </div>
+
+            <div class="mitali-identity">
+                <h2>Mitali</h2>
+                <p class="mitali-subtitle">Student Support Assistant</p>
+            </div>
+
+            <button id="mitaliClose" class="mitali-close" type="button" aria-label="Close chat">&times;</button>
+        </header>
+
+        <main id="chatMessages" class="mitali-messages" role="log" aria-live="polite">
+            <div class="mitali-welcome">
+                Hi! I'm Mitali. I can help you understand University Courses, explore Fee Structure, and find information about other University services such as Scholarships, Campus Life, Faculties, etc. What would you like help with today?
+            </div>
+
+            <div class="mitali-suggestions" id="chatSuggestions">
+                <button type="button" data-chat-prompt="Help me explore university courses.">University Courses</button>
+                <button type="button" data-chat-prompt="Explain university fee structure and deadlines.">Fee information</button>
+                <button type="button" data-chat-prompt="Tell me about scholarships available to students.">Scholarship Information</button>
+            </div>
+
+            <div id="mitaliConversation" class="mitali-conversation"></div>
+        </main>
+
+        <form id="chatForm" class="mitali-composer">
+            <textarea id="chatInput" rows="1" maxlength="4000" placeholder="Message Mitali..." aria-label="Message Mitali" required></textarea>
+
+            <button id="chatSend" type="submit" aria-label="Send message">
+                <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M22 2 11 13"></path>
+                    <path d="m22 2-7 20-4-9-9-4Z"></path>
+                </svg>
+            </button>
+        </form>
+
+        <p class="mitali-disclaimer">Mitali can make mistakes. Verify important information.</p>
+    </section>
+</div>
